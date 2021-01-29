@@ -4,7 +4,6 @@
     --darkHue: #221B1C;
     --neutralHue: #5E5766;
     --accentHue: #B98389;
-
 }
 
 body {
@@ -15,11 +14,12 @@ body {
     background-color: var(--accentHue);
 }
 
+/*HEADER & SUBHEADER CONTENT*/
 header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-content: center;
+    align-items: flex-end;
     background: var(--darkHue);
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ header {
 
 h1 {
     color: var(--lightHue);
-    margin: 30px;
+    margin: 30px 0px 10px 30px;
     font-size: 50px;
 }
 
@@ -38,14 +38,15 @@ nav {
 nav ul {
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-end;
+    justify-content: flex-end;
     list-style: none;
 }
 
 nav ul li {
-    margin: 20px;
+    margin: 0px 20px;
     padding: 5px 15px;
     font-size: 20px;
+    
 }
 
 nav a {
@@ -61,12 +62,12 @@ nav li:hover {
     display: flex;
     justify-content: flex-end;
     flex-flow: row wrap;
-    background-color: var(--lightHue);
+    background-color: var(--midHue);
     /*background-image: url(/bg1.jpg);*/
 }
 
 .subheader h2 {
-    
+    margin-right: 50px;
 }
 
 h2 {
@@ -74,67 +75,66 @@ h2 {
     margin: 15px 3px;
 }
 
+/*MAIN CONTENT*/
 main {
+    display: flex;
+    flex-flow: column nowrap;
     margin: 50px 100px;
 }
 
 h3 {
     font-size: 35px;
-    padding: 20px 30px;
-    background-color: var(--midHue);
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    color: var(--lightHue);
+    color: var(--darkHue);
 }
 
-.section {
-    background: var(--lightHue);
-    border-radius: 30px;
-    position: relative;
-}
-
-.section p, ul {
-    text-align: justify;
-    padding: 0px 40px 30px 40px;
-}
-
-.aboutMeFlexbox {
+#about,
+#work,
+#contact {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.aboutMeFlexbox p {
-    width: 50%;
+/*ABOUT ME*/
+
+.section h3, p, img {
+    padding: 15px;
 }
 
-.portraitDiv {
-    width: 40%;
+.section p {
+    text-align: justify;
 }
 
-#work {
+#about p {
+    max-width: 40%;
 }
 
+/*WORK/PROJECTS*/
 .workFlexbox {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-content: center;
-    padding: 0px 40px 30px 40px;
 }
 
 .project {
-    width: 30%;
-    height: 100px;
-    background-color:var(--neutralHue);
-    margin: 10px;
+    margin: 20px;
 }
 
+/*CONTACT*/
 #contact {
 
 }
 
+#contact ul {
+    list-style: none;
+}
+
+#contact ul li {
+    display: inline;
+    margin: 40px;
+}
+
+/*FOOTER*/
 footer {
 
 }
