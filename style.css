@@ -1,38 +1,101 @@
 :root {
-    --lightHue: ;
-    --midHue: ;
-    --darkHue: ;
-    --accentHue: ;
+    --lightHue: #CCD0B3;
+    --midHue: #73A1AB;
+    --darkHue: #150F08;
+    --neutralHue: #5E5766;
+    --accentHue: #CB7079;
 
 }
 
 body {
     margin: 0 auto;
     padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--darkHue);
+    background-color: var(--lightHue);
 }
 
 header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+    background: var(--darkHue);
+    margin: 0;
+    padding: 0;
+}
 
+h1 {
+    color: var(--lightHue);
+    margin: 30px;
+    font-size: 50px;
 }
 
 nav {
+    margin: 0;
+}
 
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-end;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 20px;
+    padding: 5px 15px;
+    font-size: 20px;
+}
+
+nav a {
+    color: var(--midHue);
+    text-decoration: none;
+}
+
+nav li:hover {
+    background-color: var(--neutralHue);
+}
+
+.subheader {
+    display: flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    background-color: var(--accentHue);
+    /*background-image: url(/bg1.jpg);*/
+}
+
+.subheader h2 {
+    
+}
+
+h2 {
+    color: var(--neutralHue);
+    margin: 15px 30px;
 }
 
 main {
+    margin: 50px;
+}
 
+h3 {
+    font-size: 35px;
+    margin: 10px 30px;
+    padding: 20px 30px;
+    background-color: var(--midHue);
 }
 
 .aboutMe {
 
 }
 
+
 .work {
 
 }
 
 .contact {
-    
+
 }
 
 footer {
