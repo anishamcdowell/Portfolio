@@ -1,5 +1,5 @@
 :root {
-    --lightHue: #FFE0B5;
+    --lightHue: #F2D2A6;
     --midHue: #EF846C;
     --darkHue: #221B1C;
     --neutralHue: #5E5766;
@@ -75,7 +75,7 @@ h2 {
 }
 
 main {
-    margin: 50px;
+    margin: 50px 100px;
 }
 
 h3 {
@@ -87,20 +87,31 @@ h3 {
     color: var(--lightHue);
 }
 
-.maintext {
+.section {
     background: var(--lightHue);
     border-radius: 30px;
+    position: relative;
 }
 
-.maintext p, ul {
+.section p, ul {
     text-align: justify;
     padding: 0px 40px 30px 40px;
 }
 
-#aboutMe {
-
+.aboutMeFlexbox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.aboutMeFlexbox p {
+    width: 50%;
+}
+
+.portraitDiv {
+    width: 40%;
+}
 
 #work {
 }
