@@ -1,9 +1,8 @@
 :root {
-    --lightHue: #F2D2A6;
-    --midHue: #EF846C;
-    --darkHue: #221B1C;
-    --neutralHue: #5E5766;
-    --accentHue: #B98389;
+    --lightHue: #E6EFE9;
+    --midHue: #1B9AAA;
+    --darkHue: #0C1618;
+    --accentHue: #9B4670;
 }
 
 body {
@@ -11,7 +10,11 @@ body {
     padding: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--darkHue);
-    background-color: var(--accentHue);
+    background-color: var(--lightHue);
+}
+
+a {
+    color: var(--accentHue);
 }
 
 /*HEADER & SUBHEADER CONTENT*/
@@ -19,16 +22,18 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     background: var(--darkHue);
     margin: 0;
-    padding: 0;
+    padding: 20px 0px;
 }
 
 h1 {
     color: var(--lightHue);
-    margin: 30px 0px 10px 30px;
+    margin: 10px 0px;
+    padding: 5px 25px 5px 50px;
     font-size: 50px;
+    background-color: var(--midHue);
 }
 
 nav {
@@ -40,46 +45,47 @@ nav ul {
     flex-flow: row wrap;
     justify-content: flex-end;
     list-style: none;
+    margin-right: 50px;
 }
 
 nav ul li {
-    margin: 0px 20px;
-    padding: 5px 15px;
+    margin: 10px;
     font-size: 20px;
     
 }
 
 nav a {
     color: var(--midHue);
-    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--accentHue);
 }
 
 nav li:hover {
-    background-color: var(--neutralHue);
+
 }
 
 .subheader {
     display: flex;
     justify-content: flex-end;
     flex-flow: row wrap;
-    background-color: var(--midHue);
+    background-color: var(--midHue);  
     /*background-image: url(/bg1.jpg);*/
 }
 
 .subheader h2 {
     margin-right: 50px;
-}
-
-h2 {
+    padding: 10px 20px;;
     color: var(--darkHue);
-    margin: 15px 3px;
+    background-color: var(--lightHue);
 }
 
 /*MAIN CONTENT*/
 main {
     display: flex;
     flex-flow: column nowrap;
-    margin: 50px 100px;
+    margin: 20px 100px;
 }
 
 h3 {
@@ -116,6 +122,11 @@ h3 {
     justify-content: center;
 }
 
+.border {
+    justify-content: center;
+    border-left: 3px solid var(--accentHue);
+}
+
 .project {
     margin: 20px;
 }
@@ -137,4 +148,34 @@ h3 {
 /*FOOTER*/
 footer {
 
+}
+
+/*TEST*/
+
+.test {
+    display: flex;
+    justify-content: row nowrap;
+    align-items: flex-start;
+}
+
+.test p {
+    width: 40%;
+}
+
+/*TEST 2*/
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+}
+
+.section h3 {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.section p {
+    border-left: 3px solid var(--accentHue);
+    height: 250px;
+    text-align: justify;
 }
