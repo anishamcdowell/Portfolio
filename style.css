@@ -71,14 +71,14 @@ nav li:hover {
     justify-content: flex-end;
     flex-flow: row wrap;
     background-color: var(--midHue);  
-    /*background-image: url(/bg1.jpg);*/
+    background-image: url(/bg1.jpg);
+    height: 150px;
 }
 
 .subheader h2 {
     margin-right: 50px;
     padding: 10px 20px;;
     color: var(--darkHue);
-    background-color: var(--lightHue);
 }
 
 /*MAIN CONTENT*/
@@ -88,18 +88,24 @@ main {
     margin: 20px 100px;
 }
 
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    margin: 30px;
+}
+
+.section p {
+    border-left: 3px solid var(--accentHue);
+    height: 250px;
+    text-align: justify;
+}
+
 h3 {
     font-size: 35px;
     color: var(--darkHue);
 }
 
-#about,
-#work,
-#contact {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-}
 
 /*ABOUT ME*/
 
@@ -111,24 +117,24 @@ h3 {
     text-align: justify;
 }
 
-#about p {
-    max-width: 40%;
-}
-
 /*WORK/PROJECTS*/
 .workFlexbox {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-}
-
-.border {
-    justify-content: center;
     border-left: 3px solid var(--accentHue);
 }
 
 .project {
-    margin: 20px;
+    position: relative;
+    border: 3px solid green;
+ 
+}
+
+.project h4 {
+    position: absolute;
+    font-size: 20px;
+    top: 40px;
+    left: 40px;
 }
 
 /*CONTACT*/
@@ -148,34 +154,4 @@ h3 {
 /*FOOTER*/
 footer {
 
-}
-
-/*TEST*/
-
-.test {
-    display: flex;
-    justify-content: row nowrap;
-    align-items: flex-start;
-}
-
-.test p {
-    width: 40%;
-}
-
-/*TEST 2*/
-.section {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: flex-start;
-}
-
-.section h3 {
-    text-align: right;
-    margin-right: 20px;
-}
-
-.section p {
-    border-left: 3px solid var(--accentHue);
-    height: 250px;
-    text-align: justify;
 }
