@@ -1,12 +1,12 @@
 :root {
     --lightHue: #E6EFE9;
-    --midHue: #1B9AAA;
-    --darkHue: #0C1618;
-    --accentHue: #9B4670;
+    --midHue: #1b7daa;
+    --darkHue: #160c1f;
+    --accentHue: #9b52ad;
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: var(--darkHue);
@@ -15,6 +15,10 @@ body {
 
 a {
     color: var(--accentHue);
+}
+
+.h3 {
+    width: 200px;
 }
 
 /*HEADER & SUBHEADER CONTENT*/
@@ -33,7 +37,6 @@ h1 {
     margin: 10px 0px;
     padding: 5px 25px 5px 50px;
     font-size: 50px;
-    background-color: var(--midHue);
 }
 
 nav {
@@ -55,30 +58,32 @@ nav ul li {
 }
 
 nav a {
-    color: var(--midHue);
+    color: var(--lightHue);
 }
 
 nav a:hover {
     color: var(--accentHue);
 }
 
-nav li:hover {
-
-}
+/*SUBHEADER*/
 
 .subheader {
-    display: flex;
-    justify-content: flex-end;
-    flex-flow: row wrap;
+    position: relative;
     background-color: var(--midHue);  
-    background-image: url(/bg1.jpg);
+    background-image: url(/lightbg.jpg);
+    background-size: 100vw;
     height: 150px;
+    margin: 0px;
 }
 
 .subheader h2 {
-    margin-right: 50px;
-    padding: 10px 20px;;
-    color: var(--darkHue);
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    color: var(--lightHue);
+    background-color: var(--accentHue);
+    padding: 10px 40px 10px 20px;
+    margin: 0;
 }
 
 /*MAIN CONTENT*/
@@ -91,7 +96,7 @@ main {
 .section {
     display: flex;
     flex-flow: row nowrap;
-    margin: 50px 0px;
+    margin: 30px 0px; 
 }
 
 .borderedFlex {
@@ -127,40 +132,50 @@ main {
 }
 
 /*WORK/PROJECTS*/
-.project {
+.work {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#workFlex {
     position: relative;
 }
 
-.project h4 {
+#topProject h4 {
     position: absolute;
-    font-size: 20px;
-    top: 40px;
-    left: 40px;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background-color: var(--midHue);
+    padding: 10px 20px;
+    font-size: 30px;
 }
 
-#project1 {
+#moreSoon h4 {
+    position: 50px;
+    left: 20px;
+}
+
+.workImages img {
+    border: 3px solid var(--midHue);
+}
+
+.workImages img:hover {
+    opacity: 1.0;
+}
+
+#topImage img {
     width: 100%;
+    height: 400px;
 }
 
-#project1 img {
-    width: 100%;
-    height: 300px;
-}
-
-#project2, #project3, {
-    width: 100%;
-}
-
-
-#project2, #project3, img {
-    height: 300px;
+#etcCards img {
+    width: 49%;
+    height: 200px;
+    object-fit: cover;
 }
 
 /*CONTACT*/
-#contact {
-
-}
-
 #contact ul {
     list-style: none;
 }
@@ -171,6 +186,99 @@ main {
 }
 
 /*FOOTER*/
-footer {
 
+/*TABLET MEDIA QUERY*/
+@media screen and (max-width:992px) {
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .subheader {
+        height: 125px;
+        margin: 0px;
+    }
+
+    .subheader h2 {
+        position: static;
+        top: 50px;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    
+    }
+
+    nav {
+        margin: 0 auto;
+    }
+    
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 30px;
+    }
+    
+    .section {
+        flex-flow: column wrap;
+    }
+    
+    .borderedFlex {
+        border-top: 3px solid var(--accentHue);
+        border-left: transparent;
+    }
+
+    .h3 {
+        text-align: left;
+    }
+
+    #about p {
+        width: 100%;
+    }
+
+    #about img {
+        min-width: 250px;
+        height: auto;
+        align-self: center;
+    }
+}
+
+/*PHONE MEDIA QUERY*/
+
+@media screen and (max-width:768px) {
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 20px 100px;
+    }
+    
+    .section {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 30px 0px; 
+    }
+    
+    .borderedFlex {
+        border-top: 3px solid var(--accentHue);
+        border-left: transparent;
+        display: flex;
+        flex-flow: row wrap;
+        padding: 20px;
+    
+    }
+    #aboutContent {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .h3 {
+        text-align: center;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    #about img {
+        width: 150px;
+        height: 100%;
+    }
 }
