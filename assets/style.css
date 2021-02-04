@@ -1,0 +1,301 @@
+:root {
+    --lightHue: #E6EFE9;
+    --midHue: #1b7daa;
+    --darkHue: #160c1f;
+    --accentHue: #9b52ad;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--darkHue);
+    background-color: var(--lightHue);
+}
+
+a {
+    color: var(--accentHue);
+}
+
+.h3 {
+    width: 200px;
+}
+
+/*HEADER & SUBHEADER CONTENT*/
+header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--darkHue);
+    margin: 0;
+    padding: 20px 0px;
+}
+
+h1 {
+    color: var(--lightHue);
+    margin: 10px 0px;
+    padding: 5px 25px 5px 50px;
+    font-size: 50px;
+}
+
+nav {
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 50px;
+}
+
+nav ul li {
+    margin: 10px;
+    font-size: 20px;
+    
+}
+
+nav a {
+    color: var(--lightHue);
+}
+
+nav a:hover {
+    color: var(--accentHue);
+}
+
+/*SUBHEADER*/
+
+.subheader {
+    position: relative;
+    background-color: var(--midHue);  
+    background-image: url(assets/images/lightbg.jpg);
+    background-size: 100vw;
+    height: 150px;
+    margin: 0px;
+}
+
+.subheader h2 {
+    position: absolute;
+    top: 70px;
+    right: 0px;
+    color: var(--lightHue);
+    background-color: var(--accentHue);
+    padding: 10px 40px 10px 20px;
+    margin: 0;
+}
+
+/*MAIN CONTENT*/
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 20px 100px;
+}
+
+.section {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 30px 0px; 
+}
+
+.borderedFlex {
+    border-left: 3px solid var(--accentHue);
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+
+}
+
+.h3 {
+    font-size: 35px;
+    color: var(--darkHue);
+    margin-right: 20px;
+    text-align: right;
+}
+
+/*ABOUT ME*/
+
+#aboutContent {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.paragraphs {
+    text-align: justify;
+    width: 60%;
+    margin-right: 20px;
+    align-self: right;
+}
+
+#aboutContent {
+    flex-flow: row nowrap;
+}
+
+.photo {
+    width: 40%;
+}
+
+/*WORK/PROJECTS*/
+.work {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#workFlex {
+    position: relative;
+}
+
+h4 {
+    color: white;
+    background-color: var(--midHue);
+    padding: 10px 20px;
+    font-size: 30px;
+}
+
+#topProject h4 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    
+}
+
+.workImages {
+    position: relative;
+}
+#moreSoon h4 {
+    position: absolute;
+    position: 50px;
+    left: 20px;
+}
+
+.workImages img {
+    border: 3px solid var(--midHue);
+}
+
+.workImages img:hover {
+    opacity: 1.0;
+}
+
+#topImage img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#etcCards img {
+    width: 49%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/*CONTACT*/
+#contact h3 {
+    margin-right: 10px;
+}
+    #contact ul {
+    list-style: none;
+}
+
+#contact ul li {
+    display: inline;
+    margin: 40px;
+}
+
+/*TABLET MEDIA QUERY*/
+@media screen and (max-width:992px) {
+
+    h1 {
+        margin: 0 auto;
+    }
+
+    .subheader {
+        height: 125px;
+        margin: 0px;
+    }
+
+    .subheader h2 {
+        position: static;
+        top: 50px;
+        padding: 10px 10px 10px 10px;
+        text-align: center;
+    
+    }
+
+    nav {
+        margin: 0 auto;
+    }
+    
+    main {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 30px;
+    }
+    .work {
+        flex-flow: column;
+    }
+    .section {
+        flex-flow: column wrap;
+    }
+    
+    .borderedFlex {
+        border-top: 3px solid var(--accentHue);
+        border-left: transparent;
+        flex-flow: row wrap;
+        justify-content: space-around; 
+        align-content: space-around;
+    }
+
+    .h3 {
+        text-align: left;
+    }
+
+    .paragraphs {
+        width: 60%;
+    }
+
+    .photo {
+       width: 40%;
+    }
+
+    .photo img {
+        max-width: 300px;
+    }
+
+    #etcCards img {
+        width: 48%;
+        height: 100px;
+
+    }
+}
+
+/*PHONE MEDIA QUERY*/
+
+@media screen and (max-width:768px) {
+    .h3 {
+        align-self: center;
+    }
+    #aboutContent {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+    .paragraphs {
+        width: 100%;
+    }
+    .photo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    #etcCards img {
+        width: 100%;
+        height: 50px;
+
+    }
+    #contact ul li{
+        display: block;
+        margin: 20px 0px;
+        text-align: center;
+    }
+
+}
