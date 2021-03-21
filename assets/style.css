@@ -69,8 +69,8 @@ nav a:hover {
 
 .subheader {
     position: relative;
-    background-color: var(--midHue);  
-    background-image: url(/assets/images/lightbg.jpg);
+    background-color: var(--midHue);
+    background-image: url(/lightbg.jpg);
     background-size: 100vw;
     height: 150px;
     margin: 0px;
@@ -184,7 +184,7 @@ h4 {
 }
 
 #etcCards img {
-    width: 49%;
+    width: 100%;
     height: 150px;
     object-fit: cover;
 }
