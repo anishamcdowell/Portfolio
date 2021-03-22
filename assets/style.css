@@ -1,8 +1,9 @@
 :root {
-    --lightHue: #E6EFE9;
+    --lightHue: #e6e6ef;
     --midHue: #1b7daa;
-    --darkHue: #160c1f;
-    --accentHue: #9b52ad;
+    --darkHue: #084F59;
+    --accentHue: #20AF96;
+    ;
 }
 
 body {
@@ -19,6 +20,7 @@ a {
 
 .h3 {
     width: 200px;
+    margin-left: 100px;
 }
 
 /*HEADER & SUBHEADER CONTENT*/
@@ -70,7 +72,7 @@ nav a:hover {
 .subheader {
     position: relative;
     background-color: var(--midHue);
-    background-image: url("images/lightbg.jpg");
+    background-image: url("images/856.jpg");
     background-size: 100vw;
     height: 150px;
     margin: 0px;
@@ -90,7 +92,7 @@ nav a:hover {
 main {
     display: flex;
     flex-flow: column nowrap;
-    margin: 20px 100px;
+    /* margin: 20px 100px; */
 }
 
 .section {
@@ -202,6 +204,21 @@ h4 {
     margin: 40px;
 }
 
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    background: var(--darkHue);
+    margin: 0;
+    padding: 50px;
+    width: 100vw
+    max-width: 100%;
+    overflow-x: hidden;;
+}
+
 /*TABLET MEDIA QUERY*/
 @media screen and (max-width:992px) {
 
@@ -229,8 +246,8 @@ h4 {
     main {
         display: flex;
         flex-flow: column wrap;
-        margin: 10px 30px;
     }
+
     .work {
         flex-flow: column;
     }
@@ -268,6 +285,7 @@ h4 {
         height: 100px;
 
     }
+
 }
 
 /*PHONE MEDIA QUERY*/
