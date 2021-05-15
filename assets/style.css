@@ -10,11 +10,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: "Roboto", sans-serif;
+    /* font-family: "Roboto", sans-serif; */
     /* color: var(--darkHue); */
     background-color: var(--lightHue);
     font-size: 15px;
     line-height: 20px;
+    overflow-x: hidden;
 }
 
 a {
@@ -22,8 +23,8 @@ a {
 }
 
 .h3 {
-    width: 200px;
-    margin-left: 100px;
+    width: 17rem;
+    background-color: #F3BC1E;
 }
 
 /*HEADER & SUBHEADER CONTENT*/
@@ -63,19 +64,6 @@ nav ul li {
     
 }
 
-nav a {
-    color: var(--lightHue);
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    border-bottom: 1.5px solid white;
-    padding-bottom: 4px;
-}
-
-nav a:hover {
-    color: #43eed1;
-    border-bottom: 1.5px solid var(--secondAccent);
-}
-
 /*SUBHEADER*/
 
 .subheader {
@@ -104,33 +92,28 @@ main {
     margin: 0;
 }
 
-.section {
+/* .section {
     display: flex;
     flex-flow: row nowrap;
     margin: 100px 0px; 
-}
+} */
 
 .borderedFlex {
-    border-left:1.5px solid #F3BC1E;
-    display: flex;
-    flex-flow: row wrap;
-    padding-left: 50px;
+    border-right:2px solid #F3BC1E;
 
 }
 
 .h3 {
     font-size: 35px;
     color: var(--darkHue);
-    margin-right: 20px;
     text-align: right;
     line-height: 38px;
 }
 
 /*ABOUT ME*/
 
-#aboutContent {
-    display: flex;
-    flex-flow: row wrap;
+#about-p {
+    margin-left: 5rem;
 }
 
 .paragraphs {
@@ -144,15 +127,15 @@ main {
     flex-flow: row nowrap;
 }
 
-.photo img {
-    height: 250px;
-    border-radius: 50%;
+.image {
+    width: 100%;
 }
 
 /*WORK/PROJECTS*/
 .work {
     display: flex;
     flex-flow: row nowrap;
+    width: 80vw;
 }
 
 #workFlex {
@@ -166,41 +149,6 @@ h4 {
     font-size: 30px;
 }
 
-#topProject h4 {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    
-}
-
-.workImages {
-    position: relative;
-}
-#moreSoon h4 {
-    position: absolute;
-    position: 50px;
-    left: 20px;
-}
-
-.workImages img {
-    border: 1.5px solid var(--accentHue);
-}
-
-.workImages img:hover {
-    opacity: 1.0;
-}
-
-#topImage img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-#etcCards img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-}
 
 /*CONTACT*/
 #contact h3 {
@@ -225,107 +173,49 @@ footer {
     background: var(--darkHue);
     margin: 0;
     padding: 80px;
-    width: 100vw
+    width: 100vw;
     max-width: 100%;
     overflow-x: hidden;;
 }
 
 /*TABLET MEDIA QUERY*/
 @media screen and (max-width:992px) {
-
-    h1 {
-        margin: 0 auto;
-    }
-
-    .subheader {
-        height: 125px;
-        margin: 0px;
-    }
-
-    .subheader h2 {
-        position: static;
-        top: 50px;
-        padding: 10px 10px 10px 10px;
-        text-align: center;
-    
-    }
-
-    nav {
-        margin: 0 auto;
-    }
-    
-    main {
-        display: flex;
-        flex-flow: column wrap;
-    }
-
-    .work {
-        flex-flow: column;
-    }
-    .section {
-        flex-flow: column wrap;
-    }
-    
-    .borderedFlex {
-        border-top: 3px solid var(--accentHue);
-        border-left: transparent;
-        flex-flow: row wrap;
-        justify-content: space-around; 
-        align-content: space-around;
-    }
-
-    .h3 {
-        text-align: left;
-    }
-
-    .paragraphs {
-        width: 60%;
-    }
-
-    .photo img {
-       /* width: 100%; */
-       height: 300px;
-    }
-
-    .photo img {
-        max-width: 300px;
-    }
-
-    #etcCards img {
+    .col-3 {
         width: 100%;
-        height: 100px;
-
     }
-
+    .col-3 .h3 {
+        margin-bottom: 1rem;
+        background-color: #F3BC1E;
+        width: 100%;
+    }
+    .borderedFlex {
+        border: none;
+    }
+    #about-row {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+    }
+    #about-p {
+        margin-left: 0;
+    }
+    #image-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
 }
 
 /*PHONE MEDIA QUERY*/
 
 @media screen and (max-width:768px) {
-    .h3 {
-        align-self: center;
-    }
-    #aboutContent {
-        flex-flow: row wrap;
-        justify-content: center;
-    }
-    .paragraphs {
-        width: 100%;
-    }
-    .photo img {
-        height: 350px;
+    #last-two-projects {
         display: flex;
-        justify-content: center;
+        flex-direction: column;
     }
-    #etcCards img {
-        width: 100%;
-        height: 150px;
-
+    #media-fi-container {
+        margin-bottom: 1rem;
     }
-    #contact ul li{
-        display: block;
-        margin: 20px 0px;
-        text-align: center;
-    }
-
 }
