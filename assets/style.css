@@ -18,25 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-a {
-    color: var(--accentHue);
-}
-
-.h3 {
-    width: 17rem;
-    background-color: #F3BC1E;
-}
-
 /*HEADER & SUBHEADER CONTENT*/
-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--darkHue);
-    margin: 0;
-    padding: 20px 0px;
-}
 
 h1 {
     color: var(--lightHue);
@@ -46,17 +28,6 @@ h1 {
     font-family: "Arimo", sans-serif;
 }
 
-nav {
-    margin: 0;
-}
-
-nav ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-end;
-    list-style: none;
-    margin-right: 50px;
-}
 
 nav ul li {
     margin: 10px 20px;
@@ -75,28 +46,8 @@ nav ul li {
     margin: 0px;
 }
 
-.subheader h2 {
-    position: absolute;
-    top: 70px;
-    right: 0px;
-    color: var(--lightHue);
-    background-color: var(--accentHue);
-    padding: 10px 40px 10px 20px;
-    margin: 0;
-}
 
 /*MAIN CONTENT*/
-main {
-    display: flex;
-    flex-flow: column nowrap;
-    margin: 0;
-}
-
-/* .section {
-    display: flex;
-    flex-flow: row nowrap;
-    margin: 100px 0px; 
-} */
 
 .borderedFlex {
     border-right:2px solid #F3BC1E;
@@ -104,10 +55,9 @@ main {
 }
 
 .h3 {
-    font-size: 35px;
+    width: 17rem;
+    background-color: #F3BC1E;
     color: var(--darkHue);
-    text-align: right;
-    line-height: 38px;
 }
 
 /*ABOUT ME*/
@@ -121,10 +71,6 @@ main {
     width: 60%;
     margin-right: 50px;
     align-self: right;
-}
-
-#aboutContent {
-    flex-flow: row nowrap;
 }
 
 .image {
@@ -180,6 +126,22 @@ footer {
 
 /*TABLET MEDIA QUERY*/
 @media screen and (max-width:992px) {
+    nav {
+        display: flex;
+        flex-flow: column nowrap;
+    }
+    #h1-container {
+        display: flex;
+        justify-content: center;
+    }
+    ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    li {
+        justify-content: center;
+        align-items: center;
+    }
     .col-3 {
         width: 100%;
     }
@@ -205,6 +167,9 @@ footer {
         justify-content: center;
         align-items: center;
         margin-top: 2rem;
+    }
+    #work-container {
+        margin-left: 0;
     }
 }
 
