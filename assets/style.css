@@ -178,7 +178,7 @@ footer {
 
 @media screen and (max-width:768px) {
     h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .navbar ul li {
         display: flex;
@@ -186,7 +186,7 @@ footer {
         list-style: none;
         margin: 0;
         text-align: center;
-        /* font-size: 10px; */
+        font-size: 14px;
     }
     #last-two-projects {
         display: flex;
