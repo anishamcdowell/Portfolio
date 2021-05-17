@@ -202,5 +202,6 @@ footer {
     }
     #contact-ul li {
         padding: 0.5rem;
+        margin: 0;
     }
 }
